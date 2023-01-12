@@ -1,5 +1,8 @@
 # visitor-badge
 
+<p align="left">
+<a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-green.svg"></a>
+</p>
 
 #### 0. Simple description
 
@@ -40,28 +43,30 @@ Styles examples:
 
 - The default badge:
 
-  `http://127.0.0.1:5000/visitor-badge/pv?namespace=example.com&key=index.html`
-
+  `https://api.visitor.plantree.me/visitor-badge/pv?namespace=example.com&key=index.html`
   
+  ![default](https://api.visitor.plantree.me/visitor-badge/pv?namespace=example.com&key=index.html)
 
 - Change a style:
 
-  ``
-
+  `https://api.visitor.plantree.me/visitor-badge/pv?namespace=example.com&key=index.html&style=for-the-badge`
   
+  ![style](https://api.visitor.plantree.me/visitor-badge/pv?namespace=example.com&key=index.html&style=for-the-badge)
 
 - Change colors:
 
-- 
+  `https://api.visitor.plantree.me/visitor-badge/pv?namespace=example.com&key=index.html&color=blue`
+  
+  ![color](https://api.visitor.plantree.me/visitor-badge/pv?namespace=example.com&key=index.html&color=blue)
 
 #### 2. Why do this
 
-I am running a personal website, which is [plantree.me](https://microsoft.visualstudio.com/Edge/_queries/query-edit/d597e0bd-5759-492f-8aeb-47ccc8f65d02/), and I need a way to count the number of visitors.
+I am running a personal website, which is [plantree.me](https://plantree.me/), and I need a way to count the number of visitors.
 
 Currently, there are some ready-made service to do this, just like: [visitor-badge](https://github.com/jwenjian/visitor-badge), [HITS](https://github.com/gjbae1212/hit-counter), etc. However, like I have post in [counter](https://github.com/plantree/counter#2-counter-vs-countapi-vs-visitor-badgehit-counter), there is no clear decoupling of presentation service and data service. That's why I develop **two separate services**:
 
 - [data service](https://github.com/plantree/counter)
-- presentation service(this)
+- presentation service (**this project**)
 
 You can use them **independently** and they all have **clear documentations and interfaces** for ease of use.
 
@@ -88,7 +93,12 @@ sequenceDiagram
 
 #### 4. Changelogs
 
+##### 0.9.0 (2022-12-26)
 
+###### Feature
+
+1. basic service is ready
+2. deploy to Vercel Serverless
 
 #### 5. Reference
 
