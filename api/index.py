@@ -3,7 +3,8 @@ import requests
 
 app = Flask(__name__)
 
-counter_service = 'http://api.counter.plantree.me'
+counter_service = 'https://api.counter.plantree.me'
+# counter_service = 'http://localhost:3000'
 
 @app.route('/')
 def home():
@@ -38,5 +39,5 @@ def visitor_badge_pv():
     return redirect(f'https://img.shields.io/badge/{label}-{message}-{color}?labelColor={labelColor}&style={style}', code=302)
 
 
-# if __name__ == '__main__':
-#     app.run(debug=True)
+if __name__ == '__main__':
+    app.run(debug=True)
