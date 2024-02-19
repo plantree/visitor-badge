@@ -3,7 +3,7 @@ import requests
 
 app = Flask(__name__)
 
-counter_service = 'https://api.counter.plantree.me'
+counter_service = 'http://api.counter.plantree.me'
 # counter_service = 'http://localhost:3000'
 
 @app.route('/')
@@ -40,4 +40,4 @@ def visitor_badge_pv():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, ssl_context='adhoc')
