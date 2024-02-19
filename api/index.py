@@ -1,8 +1,5 @@
 from flask import Flask, redirect, request, jsonify
 import requests
-import urllib3
-
-urllib3.disable_warnings()
 
 app = Flask(__name__)
 
