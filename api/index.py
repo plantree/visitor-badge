@@ -19,7 +19,7 @@ def visitor_badge_pv():
     namespace = args['namespace']
     key = args['key']
     url = f'{counter_service}/pv/increment?namespace={namespace}&key={key}'
-    res = requests.post(url)
+    res = requests.post(url, verify=False)
     if res.status_code != 200:
         return jsonify(res.json()), res.status_code
     
